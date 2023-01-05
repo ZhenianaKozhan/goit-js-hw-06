@@ -16,6 +16,7 @@ const images = [
 const gelleryEl = document.querySelector('.gallery');
 console.log(gelleryEl);
 
-const imgEl = images.map(({ url, alt }) =>  `<li class = "item"><img class = "pic" src= ${url} alt= ${alt} ></li>` );
+const imgEl = images.map(({ url, alt }) => `<li class = "item"><img class = "pic" src= ${url} alt= ${alt} ></li>`)
+  .join("");
 
 gelleryEl.insertAdjacentHTML("beforeend", imgEl);
