@@ -9,11 +9,13 @@ const ingredients = [
 
 const listEl = document.getElementById("ingredients");
 
-for (const ingredient of ingredients) {
+let arrayItem = []
 
-  const itemEl = document.createElement("li");
-  itemEl.textContent = ingredient;
-  itemEl.classList.add("item");
-  listEl.append(itemEl);
-};
+  for (const ingredient of ingredients) {
+  const itemEl = document.createElement("li")
+  itemEl.textContent = ingredient
+  itemEl.classList.add("item")
+  arrayItem.push(itemEl)
+  }
 
+listEl.append(...arrayItem);
